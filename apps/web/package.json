@@ -4,13 +4,24 @@
     "private": true,
     "description": "CausalOps Web UI - Next.js frontend for incident visualization",
     "scripts": {
-        "dev": "echo 'Web dev server - implement in COP-3.1'",
-        "build": "echo 'Web build - implement in COP-3.1'",
-        "start": "echo 'Web start - implement in COP-3.1'",
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
         "lint": "echo 'Web lint - implement in COP-3.1'",
-        "typecheck": "echo 'Web typecheck - implement in COP-3.1'",
+        "typecheck": "tsc --noEmit",
         "test": "echo 'Web test - implement in COP-6.4'"
     },
-    "dependencies": {},
-    "devDependencies": {}
+    "dependencies": {
+        "@repo/shared": "workspace:*",
+        "next": "^14.0.0",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "dotenv": "^16.3.1"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "@types/react": "^18.0.0",
+        "@types/react-dom": "^18.0.0",
+        "typescript": "^5.2.0"
+    }
 }

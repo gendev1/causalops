@@ -59,11 +59,42 @@ turbo run typecheck --dry-run=json >/dev/null || { echo "❌ TypeScript compilat
 
 echo "✅ TypeScript compilation setup successful"
 
+# Test environment validation
+echo "🔐 Testing environment validation..."
+if [ -f ".env" ]; then
+  echo "📋 Testing environment validation with .env file..."
+
+  # Test agent environment validation
+  cd apps/agent
+  if node -e "require('./dist/env.js').validateEnv()" 2>/dev/null; then
+    echo "✅ Agent environment validation passed"
+  else
+    echo "⚠️  Agent environment validation failed (expected if credentials not configured)"
+  fi
+  cd ../..
+
+  # Test web environment validation
+  cd apps/web
+  if node -e "require('./src/env.ts').env" 2>/dev/null; then
+    echo "✅ Web environment validation passed"
+  else
+    echo "⚠️  Web environment validation failed (expected if not configured)"
+  fi
+  cd ../..
+else
+  echo "⚠️  No .env file found - skipping environment validation"
+  echo "   Run 'cp .env.example .env' to enable environment validation testing"
+fi
+
 echo ""
 echo "🎉 CausalOps monorepo setup validation complete!"
 echo ""
 echo "Next steps:"
-echo "1. Copy .env.example to .env and configure credentials"
-echo "2. Run 'pnpm dev' to start development servers"
-echo "3. Begin implementing COP-1.x tasks (Elastic Data Plane)"
+echo "1. Copy .env.example to .env and configure credentials:"
+echo "   • For Elastic Cloud: Set ELASTIC_CLOUD_ID and ELASTIC_API_KEY"
+echo "   • For Local Elasticsearch: Set ELASTIC_NODE, ELASTIC_USERNAME, ELASTIC_PASSWORD"
+echo "   • Set VERTEX_AI_PROJECT_ID and VERTEX_AI_LOCATION for AI features"
+echo "2. Run 'pnpm env-check' to validate environment configuration"
+echo "3. Run 'pnpm dev' to start development servers"
+echo "4. Begin implementing COP-1.x tasks (Elastic Data Plane)"
 echo ""

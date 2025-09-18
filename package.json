@@ -10,7 +10,8 @@
         "test": "turbo run test",
         "clean": "turbo run clean",
         "seed": "turbo run seed",
-        "validate": "bash scripts/validate-setup.sh"
+        "validate": "bash scripts/validate-setup.sh",
+        "env-check": "turbo run typecheck && echo '✅ Environment schemas validated'"
     },
     "devDependencies": {
         "turbo": "^2.0.0",

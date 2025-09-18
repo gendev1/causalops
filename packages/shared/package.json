@@ -10,18 +10,24 @@
             "types": "./dist/index.d.ts",
             "default": "./dist/index.js"
         },
-        "./schemas": {
-            "types": "./dist/schemas.d.ts",
-            "default": "./dist/schemas.js"
+        "./env": {
+            "types": "./dist/env.d.ts",
+            "default": "./dist/env.js"
         }
     },
     "scripts": {
-        "build": "echo 'Shared build - implement in COP-2.4'",
-        "dev": "echo 'Shared dev - implement in COP-2.4'",
+        "build": "tsc",
+        "dev": "tsc --watch",
         "lint": "echo 'Shared lint - implement in COP-2.4'",
-        "typecheck": "echo 'Shared typecheck - implement in COP-2.4'",
+        "typecheck": "tsc --noEmit",
         "test": "echo 'Shared test - implement in COP-6.1'"
     },
-    "dependencies": {},
-    "devDependencies": {}
+    "dependencies": {
+        "zod": "^3.22.4",
+        "znv": "^0.4.0",
+        "dotenv": "^16.3.1"
+    },
+    "devDependencies": {
+        "typescript": "^5.2.0"
+    }
 }

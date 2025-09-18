@@ -2,16 +2,22 @@
     "name": "@repo/agent",
     "version": "0.1.0",
     "private": true,
-    "description": "CausalOps Agent - Fastify backend for incident diagnosis",
+    "description": "CausalOps Agent - Express backend for incident diagnosis",
     "main": "src/index.ts",
     "scripts": {
-        "dev": "echo 'Agent dev server - implement in COP-2.1'",
-        "build": "echo 'Agent build - implement in COP-2.1'",
-        "start": "echo 'Agent start - implement in COP-2.1'",
+        "dev": "tsx watch src/index.ts",
+        "build": "tsc",
+        "start": "node dist/index.js",
         "lint": "echo 'Agent lint - implement in COP-2.1'",
-        "typecheck": "echo 'Agent typecheck - implement in COP-2.1'",
+        "typecheck": "tsc --noEmit",
         "test": "echo 'Agent test - implement in COP-6.1'"
     },
-    "dependencies": {},
-    "devDependencies": {}
+    "dependencies": {
+        "@repo/shared": "workspace:*",
+        "dotenv": "^16.3.1"
+    },
+    "devDependencies": {
+        "tsx": "^4.1.0",
+        "typescript": "^5.2.0"
+    }
 }

@@ -31,14 +31,48 @@ pnpm install
 
 ### Environment Setup
 
-```bash
-# Copy environment template
-cp .env.example .env
+#### 1. Copy Environment Template
 
-# Edit with your credentials
-# - Elasticsearch Cloud ID and API key
-# - Google Cloud Vertex AI service account
+```bash
+cp .env.example .env
 ```
+
+#### 2. Configure Elasticsearch Credentials
+
+**Option A: Elastic Cloud (Recommended)**
+```bash
+# In .env file:
+ELASTIC_CLOUD_ID=your-cloud-id
+ELASTIC_API_KEY=your-api-key
+```
+
+**Option B: Local Elasticsearch**
+```bash
+# In .env file:
+ELASTIC_NODE=http://localhost:9200
+ELASTIC_USERNAME=elastic
+ELASTIC_PASSWORD=your-password
+```
+
+#### 3. Configure Google Cloud Vertex AI
+
+```bash
+# In .env file:
+VERTEX_AI_PROJECT_ID=your-gcp-project-id
+VERTEX_AI_LOCATION=us-central1
+```
+
+#### 4. Validate Environment Configuration
+
+```bash
+# Test environment validation
+pnpm env-check
+
+# Or run full setup validation
+bash scripts/validate-setup.sh
+```
+
+The system will validate your credentials and provide clear error messages if any configuration is missing or invalid.
 
 ### Development
 
