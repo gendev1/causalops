@@ -1,0 +1,17 @@
+{
+    "name": "@repo/eql",
+    "version": "0.1.0",
+    "private": true,
+    "description": "EQL patterns for CausalOps incident detection",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "echo 'EQL build - implement in COP-1.3'",
+        "dev": "echo 'EQL dev - implement in COP-1.3'",
+        "lint": "echo 'EQL lint - implement in COP-1.3'",
+        "typecheck": "echo 'EQL typecheck - implement in COP-1.3'",
+        "test": "echo 'EQL test - implement in COP-6.1'"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}

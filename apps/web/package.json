@@ -1,0 +1,16 @@
+{
+    "name": "@repo/web",
+    "version": "0.1.0",
+    "private": true,
+    "description": "CausalOps Web UI - Next.js frontend for incident visualization",
+    "scripts": {
+        "dev": "echo 'Web dev server - implement in COP-3.1'",
+        "build": "echo 'Web build - implement in COP-3.1'",
+        "start": "echo 'Web start - implement in COP-3.1'",
+        "lint": "echo 'Web lint - implement in COP-3.1'",
+        "typecheck": "echo 'Web typecheck - implement in COP-3.1'",
+        "test": "echo 'Web test - implement in COP-6.4'"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}

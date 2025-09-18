@@ -1,0 +1,21 @@
+{
+    "name": "@repo/ingestor",
+    "version": "0.1.0",
+    "private": true,
+    "description": "CausalOps Ingestor - CLI tools for Elasticsearch data seeding",
+    "main": "src/index.ts",
+    "bin": {
+        "seed": "dist/seed.js",
+        "index-init": "dist/index-init.js"
+    },
+    "scripts": {
+        "dev": "echo 'Ingestor dev - implement in COP-4.1'",
+        "build": "echo 'Ingestor build - implement in COP-4.1'",
+        "seed": "echo 'Seed command - implement in COP-4.1'",
+        "lint": "echo 'Ingestor lint - implement in COP-4.1'",
+        "typecheck": "echo 'Ingestor typecheck - implement in COP-4.1'",
+        "test": "echo 'Ingestor test - implement in COP-6.1'"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}

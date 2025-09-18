@@ -1,0 +1,17 @@
+{
+    "name": "@repo/prompts",
+    "version": "0.1.0",
+    "private": true,
+    "description": "LLM prompt templates for CausalOps",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "echo 'Prompts build - implement in COP-2.5'",
+        "dev": "echo 'Prompts dev - implement in COP-2.5'",
+        "lint": "echo 'Prompts lint - implement in COP-2.5'",
+        "typecheck": "echo 'Prompts typecheck - implement in COP-2.5'",
+        "test": "echo 'Prompts test - implement in COP-6.3'"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}

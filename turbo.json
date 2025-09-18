@@ -1,0 +1,36 @@
+{
+    "$schema": "https://turborepo.com/schema.json",
+    "ui": "stream",
+    "globalDependencies": [".env", "tsconfig.json", "pnpm-workspace.yaml"],
+    "globalEnv": ["NODE_ENV", "ELASTIC_CLOUD_ID", "ELASTIC_API_KEY", "GOOGLE_APPLICATION_CREDENTIALS"],
+    "tasks": {
+        "build": {
+            "dependsOn": ["^build"],
+            "outputs": ["dist/**", ".next/**", "!.next/cache/**", "build/**"],
+            "env": ["NODE_ENV"]
+        },
+        "dev": {
+            "cache": false,
+            "persistent": true,
+            "interruptible": true
+        },
+        "lint": {
+            "outputs": []
+        },
+        "typecheck": {
+            "dependsOn": ["^build"],
+            "outputs": []
+        },
+        "test": {
+            "dependsOn": ["build"],
+            "outputs": ["coverage/**"]
+        },
+        "clean": {
+            "cache": false
+        },
+        "seed": {
+            "dependsOn": ["build"],
+            "cache": false
+        }
+    }
+}
