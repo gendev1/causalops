@@ -15,4 +15,32 @@ export {
   EnvironmentValidationError,
 } from './startup.js';
 
-console.log('CausalOps Shared - Coming in COP-2.4');
+// Elasticsearch schemas and types
+export {
+  EventActionSchema,
+  LabelsSchema,
+  MetricsSchema,
+  ServiceSchema,
+  EventSchema,
+  LogDocumentSchema,
+  BulkIndexRequestSchema,
+  IndexCreationRequestSchema,
+  sampleLogDocument,
+  type EventAction,
+  type Labels,
+  type Metrics,
+  type Service,
+  type Event,
+  type LogDocument,
+  type BulkIndexRequest,
+  type IndexCreationRequest,
+} from './elastic-index.js';
+
+// Elasticsearch client and utilities
+export {
+  ElasticIndexInitializer,
+  initializeElasticIndex,
+  type IndexInitOptions,
+} from './elastic-client.js';
+
+console.log('CausalOps Shared - Ready for Elasticsearch integration');

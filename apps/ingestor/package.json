@@ -9,13 +9,19 @@
         "index-init": "dist/index-init.js"
     },
     "scripts": {
-        "dev": "echo 'Ingestor dev - implement in COP-4.1'",
-        "build": "echo 'Ingestor build - implement in COP-4.1'",
+        "dev": "tsx watch src/index.ts",
+        "build": "tsc",
         "seed": "echo 'Seed command - implement in COP-4.1'",
+        "index-init": "tsx src/index-init.ts",
         "lint": "echo 'Ingestor lint - implement in COP-4.1'",
-        "typecheck": "echo 'Ingestor typecheck - implement in COP-4.1'",
+        "typecheck": "tsc --noEmit",
         "test": "echo 'Ingestor test - implement in COP-6.1'"
     },
-    "dependencies": {},
-    "devDependencies": {}
+    "dependencies": {
+        "@repo/shared": "workspace:*"
+    },
+    "devDependencies": {
+        "typescript": "^5.2.0",
+        "tsx": "^4.0.0"
+    }
 }

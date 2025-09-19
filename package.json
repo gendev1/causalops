@@ -10,6 +10,8 @@
         "test": "turbo run test",
         "clean": "turbo run clean",
         "seed": "turbo run seed",
+        "index:init": "turbo run index-init --filter=@repo/ingestor",
+        "index:recreate": "turbo run index-init --filter=@repo/ingestor -- --recreate",
         "validate": "bash scripts/validate-setup.sh",
         "env-check": "turbo run typecheck && echo '✅ Environment schemas validated'"
     },
